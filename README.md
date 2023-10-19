@@ -293,7 +293,7 @@ $=  1$
 Okay, our equation is valid because it equals to 1.  
 This equation also shows the final probability of each basis, which is :  
 
-$25\%\ket{A_0}\ket{B_0} + 25\%\ket{A_0}\ket{B_1} + 50\%\ket{A_1}\ket{B_0} + 0\%\ket{A_1}\ket{B_1}$  
+$25\ket{A_0}\ket{B_0} + 25\ket{A_0}\ket{B_1} + 50\ket{A_1}\ket{B_0} + 0\\ket{A_1}\ket{B_1}$  
 
 That means, the probability of qubit A and qubit B showing 0 is 25%
 
