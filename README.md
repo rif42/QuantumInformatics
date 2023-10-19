@@ -225,4 +225,3 @@ $\ket{\downarrow} = \dfrac{1}{4}\ket{\rightarrow} + \dfrac{3}{4}\ket{\leftarrow}
 $\ket{\downarrow} = 25\%\ket{\rightarrow} + 75\%\ket{\leftarrow}$  
 
 That means for every 100 electrons measured this way, 75 electrons will have $\ket{\rightarrow}$ spin, while 5 electrons will have $\ket{\leftarrow}$ spin
-
