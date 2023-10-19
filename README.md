@@ -48,12 +48,10 @@ Using these two unique properties of quantum particles, we can create a whole ne
 Normal or classical bits has 2 states, 1 and 0. but qubits can have as many as it wants, because qubits follows the spin property, which has infinite amount of possible angles or rotations.  
 However, all quantum particles (therefore qubits) will be [quantized](assets/https://en.wikipedia.org/wiki/Quantization_(physics)) when measured, so they become classical bits with 1 and 0.  
 
-## Meeting 4
-
+## Meeting 4 (part 1) - Measuring Rotated Qubit
 ![lecture1](assets/1.jpg)  
 
-This image shows the calculation of rotating a qubit spin and measuring its probability output.
-
+This image shows the calculation of rotating a qubit spin and measuring its probability output.  
 lets say we have a pair of qubits with two basis which we want to transform into another basis:  
 
 $$
@@ -225,3 +223,78 @@ $\ket{\downarrow} = \dfrac{1}{4}\ket{\rightarrow} + \dfrac{3}{4}\ket{\leftarrow}
 $\ket{\downarrow} = 25\%\ket{\rightarrow} + 75\%\ket{\leftarrow}$  
 
 That means for every 100 electrons measured this way, 75 electrons will have $\ket{\rightarrow}$ spin, while 5 electrons will have $\ket{\leftarrow}$ spin
+
+## Meeting 4 (part 2) - Entanglement of Two Qubits
+![lecture1-part2](assets/2.jpg)  
+
+When when we measure one qubit from a pair of qubits, and we get its spin, and the second (paired) qubit shows the opposite of the first qubit's spin, we call the pair of qubits **entangled**  
+
+Quantum entanglement plays an extremely important role in cybersecurity due to its instantenous information transfer and privacy through infinite states of a qubit. See [this video](https://www.youtube.com/watch?v=-UrdExQW0cs) for further explanation. 
+
+Let's say we have two person; Alice and Bob. They want to exchange messages through qubits.  
+Alice has one qubit and two basis,  $\ket{v} = \ket{A_0}, \ket{A_1}$  
+Bob also has one qubit and two basis, $\ket{w} =\ket{B_0}, \ket{B_1}$  
+
+First we perform a tensor (or outer product) operation on qubit $\ket{v}$ and $\ket{w}$  
+
+$\ket{v} \otimes \ket{w} = \ket{A_0}\ket{B_0} + \ket{A_0}\ket{B_1} + \ket{A_1}\ket{B_0} + \ket{A_1}\ket{B_1}$  
+
+We substitute them with r s t u for clarity:  
+
+$r = \ket{A_0}\ket{B_0}$  
+
+$s = \ket{A_0}\ket{B_1}$  
+
+$t = \ket{A_1}\ket{B_0}$  
+
+$u = \ket{A_1}\ket{B_1}$  
+
+When rstu is exponentiated, it must be equal to 1, otherwise the calculation is invalid  
+
+$r^2 + s^2 + t^2 + u^2 = 1$  
+
+if $ru = st$, then two qubits are not entangled.  
+if $ru \neq st$, then two qubits are entangled.  
+
+
+### Example
+Lets say Alice and Bob's qubits are as follows :  
+
+$\dfrac{1}{2}\ket{A_0}\ket{B_0} + \dfrac{1}{2}\ket{A_0}\ket{B_1} + \dfrac{1}{\sqrt{2}}\ket{A_1}\ket{B_0} + 0\ket{A_1}\ket{B_1}$  
+
+First we determine whether the qubits are entangled or not :  
+
+$ru \neq st$  
+
+$\dfrac{1}{2}\ket{A_0}\ket{B_0} * 0\ket{A_1}\ket{B_1} \neq \dfrac{1}{2}\ket{A_0}\ket{B_1} * \dfrac{1}{\sqrt{2}}\ket{A_1}\ket{B_0}$
+
+$0 \neq \dfrac{\sqrt{2}}{4}$
+
+Its proven that the qubits are **entangled**  
+
+Then we calculate the final probability :  
+
+$r^2 + s^2 + t^2 + u^2 = 1$  
+
+$r = \dfrac{1}{2}\ket{A_0}\ket{B_0}$  
+
+$s = \dfrac{1}{2}\ket{A_0}\ket{B_1}$
+
+$t = \dfrac{1}{\sqrt{2}}\ket{A_1}\ket{B_0}$  
+
+$u = 0\ket{A_1}\ket{B_1}$
+
+$= (\dfrac{1}{2})^2 + (\dfrac{1}{2})^2 + (\dfrac{1}{\sqrt{2}})^2 + 0^2$  
+
+$= \dfrac{1}{4} + \dfrac{1}{4} + \dfrac{1}{2} + 0$  
+
+$=  1$ 
+ 
+Okay, our equation is valid because it equals to 1.  
+This equation also shows the final probability of each basis, which is :  
+
+$25\%\ket{A_0}\ket{B_0} + 25\%\ket{A_0}\ket{B_1} + 50\%\ket{A_1}\ket{B_0} + 0\%\ket{A_1}\ket{B_1}$  
+
+That means, the probability of qubit A and qubit B showing 0 is 25%
+
+But what if we want to check the relationship between two qubits, we must measure only one qubit, then the other.
