@@ -50,34 +50,34 @@ However, all quantum particles (therefore qubits) will be [quantized](assets/htt
 
 ## Meeting 4
 
-![[1.jpg]]
+![lecture1](assets/1.jpg)  
 
 This image shows the calculation of rotating a qubit spin and measuring its probability output.
 
-lets say we have a pair of qubits with two basis which we want to transform into another basis:
-$$
-\begin{bmatrix}
-1 \\
-0 \\
-\end{bmatrix}
-\begin{bmatrix}
-0 \\
-1 \\ 
-\end{bmatrix}
+lets say we have a pair of qubits with two basis which we want to transform into another basis:  
 
+$$
+\begin{bmatrix}  
+1 \\  
+0 \\  
+\end{bmatrix}  
+\begin{bmatrix}  
+0 \\  
+1 \\   
+\end{bmatrix} 
 \rightarrow
-
 \begin{bmatrix}
-\dfrac{1}{\sqrt{2}} \\\\
--\dfrac{1}{\sqrt{2}} \\\\
+\dfrac{1}{\sqrt{2}} \\
+-\dfrac{1}{\sqrt{2}} \\
 \end{bmatrix}
 \begin{bmatrix}
-\dfrac{1}{\sqrt{2}} \\\\
--\dfrac{1}{\sqrt{2}} \\\\
+\dfrac{1}{\sqrt{2}} \\
+-\dfrac{1}{\sqrt{2}} \\
 \end{bmatrix}
 $$
 
-which is equivalent to (in ket notation): 
+which is equivalent to (in ket notation):  
+
 $$
 \begin{bmatrix}
 \ket{\uparrow} 
@@ -85,9 +85,7 @@ $$
 \begin{bmatrix}
 \ket{\downarrow}
 \end{bmatrix}
-
 \rightarrow
-
 \begin{bmatrix}
 \ket{\rightarrow}
 \end{bmatrix}
@@ -99,42 +97,38 @@ $$
 assuming the spin direction is 90deg, and we want to rotate it 30deg, that means the alpha is 30  
 $$\alpha = 30\degree$$  
 
-therefore we have to calculate the matrix operator by substituting the alpha into following matrix:    
-$$
+Therefore we have to calculate the matrix operator by substituting the alpha into following matrix:    
+
+$$  
 \begin{bmatrix}
 cos\alpha & sin\alpha  \\
 -sin\alpha & cos\alpha \\ 
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 cos30 & sin30  \\
 -sin30 & cos30  \\ 
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
-\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\\\
--\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\\\ 
+\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\
+-\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\
 \end{bmatrix}
 $$
 
 then we use the matrix operator on each basis to calculate the new basis.  
-for the $\ket{\uparrow}$ basis:
+for the $\ket{\uparrow}$ basis: 
+
 $$
 \begin{bmatrix}
-\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\\\
--\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\\\ 
+\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\
+-\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\
 \end{bmatrix}
-
 \begin{bmatrix}
 1 \\
 0 \\ 
-\end{bmatrix}
-
-=
-
+\end{bmatrix}=
 \begin{bmatrix}
-\dfrac{\sqrt{3}}{2}\\\\
--\dfrac{1}{2} \\\\ 
+\dfrac{\sqrt{3}}{2}\\
+-\dfrac{1}{2} \\
 \end{bmatrix}
 $$
 
@@ -142,20 +136,16 @@ for the $\ket{\downarrow}$ basis:
 
 $$
 \begin{bmatrix}
-\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\\\
--\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\\\ 
+\dfrac{1}{2}\sqrt{3} & \dfrac{1}{2}  \\
+-\dfrac{1}{2} & \dfrac{1}{2}\sqrt{3}  \\
 \end{bmatrix}
-
 \begin{bmatrix}
 0 \\
 1 \\ 
-\end{bmatrix}
-
-=
-
+\end{bmatrix}=
 \begin{bmatrix}
-\dfrac{1}{2} \\\\ 
-\dfrac{\sqrt{3}}{2}\\\\
+\dfrac{1}{2} \\ 
+\dfrac{\sqrt{3}}{2}\\
 \end{bmatrix}
 $$
 
@@ -172,22 +162,16 @@ $$
 \begin{bmatrix}
 1 \\
 0 \\ 
-\end{bmatrix}
-
-=
-
+\end{bmatrix}=
 \dfrac{1}{\sqrt{2}}
 \begin{bmatrix}
-\dfrac{1}{\sqrt{2}} \\\\
--\dfrac{1}{\sqrt{2}} \\\\
-\end{bmatrix}
-
-+
-
+\dfrac{1}{\sqrt{2}} \\
+-\dfrac{1}{\sqrt{2}} \\
+\end{bmatrix}+
 \dfrac{1}{\sqrt{2}}
 \begin{bmatrix}
-\dfrac{1}{\sqrt{2}} \\\\
-\dfrac{1}{\sqrt{2}} \\\\
+\dfrac{1}{\sqrt{2}} \\
+\dfrac{1}{\sqrt{2}} \\
 \end{bmatrix}
 $$
 
@@ -195,19 +179,14 @@ $$
 \begin{bmatrix}
 1 \\
 0 \\ 
-\end{bmatrix}
-
-=
-
+\end{bmatrix}=
 \begin{bmatrix}
-\dfrac{1}{{2}} \\\\
--\dfrac{1}{{2}} \\\\
-\end{bmatrix}
-
-+
+\dfrac{1}{{2}} \\
+-\dfrac{1}{{2}} \\
+\end{bmatrix}+
 \begin{bmatrix}
-\dfrac{1}{{2}} \\\\
-\dfrac{1}{{2}} \\\\
+\dfrac{1}{{2}} \\
+\dfrac{1}{{2}} \\
 \end{bmatrix}
 $$
 
@@ -215,8 +194,7 @@ $$
 \begin{bmatrix}
 1 \\
 0 \\ 
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 1 \\
 0 \\ 
@@ -235,7 +213,7 @@ $\ket{\uparrow} = \dfrac{3}{4}\ket{\rightarrow} + \dfrac{1}{4}\ket{\leftarrow}$
 
 $\ket{\uparrow} = 75\%\ket{\rightarrow} + 25\%\ket{\leftarrow}$  
 
-That means for every 100 electrons measured this way, 75 electrons will have $\ket{\rightarrow}$ basis, while 25 electrons will have $\ket{\leftarrow}$ basis
+That means for every 100 electrons measured this way, 75 electrons will have $\ket{\rightarrow}$ spin, while 25 electrons will have $\ket{\leftarrow}$ spin
 
 for the $\ket{\downarrow}$ basis:   
 $\ket{\downarrow} = \dfrac{1}{2} \ket{\rightarrow} + \dfrac{\sqrt{3}}{2} \ket{\leftarrow}$  
@@ -245,3 +223,6 @@ $\ket{\downarrow} = (\dfrac{1}{2})^2 \ket{\rightarrow} + (\dfrac{\sqrt{3}}{2})^2
 $\ket{\downarrow} = \dfrac{1}{4}\ket{\rightarrow} + \dfrac{3}{4}\ket{\leftarrow}$  
 
 $\ket{\downarrow} = 25\%\ket{\rightarrow} + 75\%\ket{\leftarrow}$  
+
+That means for every 100 electrons measured this way, 75 electrons will have $\ket{\rightarrow}$ spin, while 5 electrons will have $\ket{\leftarrow}$ spin
+
