@@ -354,9 +354,9 @@ b. what is the probability of the first qubit to be 1 ?
 we simply need to add the probability of ket $\ket{10}$ and ket 
 $\ket{11}$
 
-$ = \dfrac{9}{100}\ket{10} + \dfrac{27}{100}\ket{11}$
+$= \dfrac{9}{100}\ket{10} + \dfrac{27}{100}\ket{11}$
 
-$ = \dfrac{9}{25}$  
+$= \dfrac{9}{25}$  
 
 the probability of the first qubit to be 1 is 9/25  
 
